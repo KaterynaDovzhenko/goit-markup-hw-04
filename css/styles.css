@@ -1,0 +1,555 @@
+body {
+    font-family:'Roboto', sans-serif; ;
+    color: #2E2F42;
+}
+
+:root {
+    --main-color: #2E2F42;
+    --white-color: #fff;
+    --second-color: #4D5AE5;
+    --hover-btn-color: #404BBF;
+    --general-color: #434455;
+    --background-color: #F4F4FD;
+    --border-color: #E7E9FC;
+    --grey-color: #8E8F99;
+    
+}
+
+/* ======================= GLOBAL ======================= */
+
+h1,h2,h3,h4,h5,h6, p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    border-bottom: 1px solid var(--border-color);;
+}
+
+img {
+    display: block;
+}
+
+.section {
+    padding-top: 120px;
+}
+
+/* ======================= /GLOBAL ======================= */
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.menu {
+    display: flex;
+    margin-left: 76px;
+
+}
+
+.menu .item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.logo {
+    font-family: 'Raleway',sans-serif;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-color)
+}
+
+.logo-web {
+    color: var(--second-color);
+}
+
+.menu-list {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-color);
+
+}
+
+.menu-list:hover,
+.menu-list:focus {
+    color: var(--second-color);
+}
+
+.menu .menu-list.current {
+    color: var(--hover-btn-color);
+}
+
+.address .list {
+    display: flex;
+}
+
+.address {
+    margin-left: auto;
+}
+
+.list .item-contact-nav + .item-contact-nav {
+    margin-left: 40px;
+}
+
+
+.contact {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--general-color);
+    font-style: normal;
+    
+    
+}
+
+.contact:hover,
+.contact:focus {
+    color: var(--second-color);
+}
+
+.main-tittle {
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 48px;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    color: var(--white-color);
+    width: 496px;
+}
+
+.suptittle {
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+}
+
+.general-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--general-color);
+}
+
+.tittle{
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+
+.color-white {
+    color: var(--white-color);
+}
+
+.tittle {
+    margin-bottom: 72px;
+}
+
+
+
+
+/* =======================PAGE 1 ======================= */
+
+.hero {
+    background-color: var(--main-color);
+    text-align: center;
+}
+
+.container-hero {
+     padding-top: 188px;
+     margin-bottom: 188px;
+
+}
+
+.bg-img-main {
+    height: 600px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)) ,
+        url("../images/people-office.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.btn {
+    text-align: center;
+    font-size: 16px;
+    font-family: inherit;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--white-color);
+    padding: 16px 32px;
+    min-width: 169px;
+    background: var(--second-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;     
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--hover-btn-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+/* =======================FEATURES======================= */
+
+
+.features-list {
+    display: flex;
+}
+
+.features-list .features-items:not(:last-child) {
+    margin-right: 24px;
+    
+}
+
+.features-items::before {
+
+    display: block;
+    content: '';
+    height: 112px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--background-color);
+}
+
+.features-items.antenna::before {
+    background-image: url(../images/antenna.svg);
+}
+
+.features-items.clock::before {
+    background-image: url(../images/clock.svg);
+}
+
+.features-items.diagram::before {
+    background-image: url(../images/diagram.svg);
+}
+
+.features-items.astronaut::before {
+    background-image: url(../images/astronaut.svg);
+}
+
+
+
+.features-items .suptittle {
+    margin: 8px 0 8px 0;
+}
+
+/* =======================/FEATURES======================= */
+
+/* =======================DO======================= */
+
+.do {
+  padding-bottom: 120px;
+}
+
+.do .list {
+    display: flex;
+}
+
+.do .items:not(:last-child) {
+    margin-right: 24px; 
+}
+
+/* =======================DO======================= */
+
+/* =======================TEAM======================= */
+.team {
+    background-color: var(--background-color);
+     padding-bottom: 120px;
+}
+
+.list-team {
+    display: flex;
+}
+
+.list-team .items {
+    text-align: center;
+    background-color: var(--white-color);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.list-team .items + .items {
+    margin-left: 24px;
+} 
+
+.container-team-name {
+    padding-top: 32px;
+    padding-bottom: 8px;
+}
+
+.social-list{
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.social-icon {
+    width: 16px;
+    height: 16px;
+    fill: var(--background-color);
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--second-color);
+    border-radius: 50%;
+}
+
+.social-links:hover {
+    background-color: var(--hover-btn-color);
+}
+
+.social-list .social-item {
+    width: 40px;
+    height: 40px;
+
+}
+
+/* =======================/TEAM======================= */
+
+/* =======================CUSTOMERS======================= */
+
+.customers-container {
+    padding-bottom: 120px;
+}
+
+.customer-list {
+    display: flex;
+    gap: 24px;
+
+}
+
+.customer-icon {
+    width: 104px;
+    height: 56px;
+    fill: var(--grey-color);
+}
+
+.customer-icon:hover {
+    fill: var(--hover-btn-color); 
+}
+
+.customer-item {
+    width: 168px;
+    height: 88px;
+    border: 1px solid var(--grey-color);
+    border-radius: 4px;
+}
+
+.customer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.customer-link:hover {
+    border: 1px solid var(--hover-btn-color);
+
+}
+
+/* =======================/CUSTOMERS======================= */
+
+/* =======================/PAGE 1 ======================= */
+
+/* =======================PAGE 2 ======================= */
+
+.portfolio-section {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
+.btn-portfolio {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 72px;
+
+}
+
+.btn-portfolio .nav-portfolio + .nav-portfolio {
+    margin-left: 24px;
+}
+
+.list-btn-portfolio {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: inherit;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--second-color);
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.list-btn-portfolio:hover,
+.list-btn-portfolio:focus {
+    background-color: var(--hover-btn-color);
+     border: 1px solid var(--hover-btn-color);
+    color: var(--white-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+.portfolio-ex {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.portfolio-ex .items:hover,
+.portfolio-ex .items:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+
+.portfolio-ex .items {
+    margin-left: 24px;
+    margin-bottom: 48px;
+    width: calc((100% - 48px)/ 3);
+    
+}
+
+.portfolio-ex .items:nth-child(3n+1) {
+    margin-left: 0;
+}
+
+.portfolio-ex .items:nth-last-child(-n+3) {
+    margin-bottom: 0;
+}
+
+.container-portfolio-text {
+    text-align: left;
+    padding-left: 16px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-right: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    min-width: 360px;
+
+}
+
+.tittle-portfolio {
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--main-color);
+}
+
+.descr-portfolio {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-color);
+}
+
+/* =======================PAGE /2 ======================= */
+
+/* =======================FOOTER======================= */
+
+.footer-container {
+    display: flex;
+}
+
+footer {
+    background-color: var(--main-color);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.footer-social h4 { 
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--white-color);
+    margin-bottom: 16px;
+}
+
+.footer-social {
+    margin-left: 120px;
+}
+
+.text-footer {
+    margin-top: 16px;
+    max-width: 264px;
+
+}
+
+.social-list-footer {
+    display: flex;
+    gap: 16px;
+}
+
+.social-icon-footer {
+    width: 24px;
+    height:24px;
+    fill: var(--background-color);
+}
+
+.social-links-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.social-list-footer .social-item-footer {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* =======================/FOOTER ======================= */
