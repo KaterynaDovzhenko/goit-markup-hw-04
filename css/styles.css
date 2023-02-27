@@ -327,7 +327,7 @@ img {
 .social-icon {
     width: 16px;
     height: 16px;
-    fill: var(--background-color);
+    fill: currentColor;
 }
 
 .social-links {
@@ -337,6 +337,7 @@ img {
     height: 100%;
     width: 100%;
     background-color: var(--second-color);
+    color: var(--background-color);
     border-radius: 50%;
 }
 
@@ -363,10 +364,6 @@ img {
     gap: 24px;
 }
 
-svg.customer-icon {
-    fill: currentColor;
-}
-
 .customer-icon {
     width: 104px;
     height: 56px;
@@ -391,6 +388,10 @@ svg.customer-icon {
 .customer-link:focus {
     border: 1px solid var(--hover-btn-color);
     color: var(--hover-btn-color);
+}
+
+svg.customer-icon {
+    fill: currentColor;
 }
 
 
@@ -536,7 +537,7 @@ footer {
 .social-icon-footer {
     width: 24px;
     height:24px;
-    fill: var(--background-color);
+    fill: currentColor;
 }
 
 .social-links-footer {
@@ -546,6 +547,7 @@ footer {
     height: 100%;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.1);
+    color: var(--background-color);;
     border-radius: 50%;
 }
 
