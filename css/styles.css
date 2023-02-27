@@ -84,10 +84,9 @@ img {
     color: var(--second-color);
 }
 
-.menu-list {
+.menu-item {
     display: block;
     padding-top: 24px;
-    padding-bottom: 24px;
 
     font-size: 16px;
     font-weight: 500;
@@ -97,13 +96,32 @@ img {
 
 }
 
-.menu-list:hover,
-.menu-list:focus {
-    color: var(--second-color);
+.menu-item:hover,
+.menu-item:focus {
+    color: var(--hover-btn-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu .menu-list.current {
+.menu .menu-item.current {
     color: var(--hover-btn-color);
+}
+
+.menu-item::after{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--hover-btn-color);
+    border-radius: 2px;
+    margin-top: 24px;
+    opacity: 0;
+
+}
+
+.menu-item.current::after {
+    opacity: 1;
 }
 
 .address .list {
@@ -118,7 +136,6 @@ img {
     margin-left: 40px;
 }
 
-
 .contact {
     font-size: 16px;
     line-height: 1.5;
@@ -132,6 +149,7 @@ img {
 .contact:hover,
 .contact:focus {
     color: var(--second-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-tittle {
@@ -227,6 +245,7 @@ img {
     background-color: var(--hover-btn-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* =======================FEATURES======================= */
@@ -343,6 +362,7 @@ img {
 
 .social-links:hover {
     background-color: var(--hover-btn-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list .social-item {
@@ -388,6 +408,8 @@ img {
 .customer-link:focus {
     border: 1px solid var(--hover-btn-color);
     color: var(--hover-btn-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+    
 }
 
 svg.customer-icon {
@@ -438,6 +460,7 @@ svg.customer-icon {
     color: var(--white-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-ex {
@@ -449,7 +472,7 @@ svg.customer-icon {
 .portfolio-ex .items {
     margin-left: 24px;
     margin-bottom: 48px;
-    width: calc((100% - 48px)/ 3);
+    flex-basis: calc((100% - 48px)/ 3);
     
 }
 
@@ -480,6 +503,7 @@ svg.customer-icon {
 .portfolio-link:hover,
 .portfolio-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tittle-portfolio {
@@ -495,6 +519,42 @@ svg.customer-icon {
     letter-spacing: 0.02em;
     color: var(--main-color);
 }
+
+.portfolio-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+
+ .text-portfolio-card {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--background-color);
+    background: var(--second-color);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px 32px 164px 32px; 
+    transform: translateY(100%);
+    transition: transform 250ms ease;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-link:hover .text-portfolio-card,
+.portfolio-link:focus .text-portfolio-card {
+    transform: translateY(0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
 
 /* =======================PAGE /2 ======================= */
 
@@ -554,6 +614,7 @@ footer {
 .social-links-footer:hover,
 .social-links-footer:focus {
     background-color: var(--hover-second-btn-color);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-footer .social-item-footer {
@@ -563,3 +624,61 @@ footer {
 
 
 /* =======================/FOOTER ======================= */
+
+/* =======================MODAL ======================= */
+
+.backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(47, 48, 58, 0.4);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 581px;
+    min-width: 528px;
+    background: var(--background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button {
+    fill: #000;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(231, 233, 252, 1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-icon {
+    height: 8px;
+    width: 8px;
+}
+
+/* =======================/MODAL ======================= */
